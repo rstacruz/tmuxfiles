@@ -1,0 +1,5 @@
+# fix clipboard
+  set-option -g default-command "reattach-to-user-namespace -l $SHELL"
+
+# copy
+  bind C-c run -b "tmux show-buffer | pbcopy"
