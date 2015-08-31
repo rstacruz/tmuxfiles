@@ -5,3 +5,4 @@ link: tpm
 tpm:
 	mkdir -p plugins
 	git clone https://github.com/tmux-plugins/tpm ./plugins/tpm
+	@echo "be sure to hit prefix + I to install plugins"
