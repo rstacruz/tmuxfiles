@@ -14,13 +14,13 @@
 
 # Status format
   set -g status-right '#[fg=black]→ #[fg=blue]#S #[fg=#333333]%I:%M %p'
-  set -g status-left '                     '
-  set -g status-left '#(timetip -R tmux)'
+  set -g status-left '                  '
+  # set -g status-left '#(timetip -R tmux)'
 
 # Tabs
   setw -g window-status-separator '   '
-  setw -g window-status-current-format '↑'
-  setw -g window-status-format '•'
+  setw -g window-status-current-format '∙'
+  setw -g window-status-format '∘'
 
 # Status line options
   set -g status-position bottom
