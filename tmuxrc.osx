@@ -3,4 +3,4 @@
 # set-option -g default-command "$SHELL"
 
 # copy
-bind C-c run -b "tmux show-buffer | pbcopy"
+bind C-c run -b "tmux show-buffer | /usr/bin/pbcopy"
