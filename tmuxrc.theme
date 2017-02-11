@@ -19,7 +19,7 @@
 
 # Tabs
   setw -g window-status-separator '   '
-  setw -g window-status-current-format '∙'
+  setw -g window-status-current-format '○'
   setw -g window-status-format '∙'
 
 # Status line options
