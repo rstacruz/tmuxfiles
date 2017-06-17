@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-ping 8.8.8.8 -c 1 | head -n 2 | tail -n 1 | sed 's/^.*time=//g'
+ping 8.8.8.8 -c 1 | head -n 2 | tail -n 1 | sed 's/^.*time=//g' | sed 's/\.[0-9]\+ //'
