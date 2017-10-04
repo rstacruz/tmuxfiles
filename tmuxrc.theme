@@ -15,6 +15,7 @@
 # Status format
 # set -g status-right '#[fg=blue]#S #[fg=#333333]%I:%M %p'
   set -g status-right '#[fg=blue]#S '
+  if-shell 'test $(uname | tr [A-Z] [a-z]) = "linux"' "set -g status-right '#[fg=red]#S '"
   set -g status-left ' '
 
 # Tabs
