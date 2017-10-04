@@ -13,9 +13,7 @@
   setw -g window-status-activity-style 'fg=#10307a'
 
 # Status format
-# set -g status-right '#[fg=blue]#S #[fg=#333333]·#[fg=#666666] #($HOME/.tmux/bin/status) #[fg=#333333]·#[fg=#666666] %I:%M %p'
-# set -g status-left ' ∴ #S  '
-# set -g status-right '#[fg=blue] #S #[fg=#333333]·#[fg=#666666] #($HOME/.tmux/bin/status) '
+# set -g status-right '#[fg=blue]#S #[fg=#333333]%I:%M %p'
   set -g status-right '#[fg=blue]#S '
   set -g status-left ' '
 
@@ -27,7 +25,6 @@
 # Status line options
   set -g status-position bottom
   set -g status-justify right
-# set -g status-justify centre
   set -g status-interval 10
   set -g status-right-length 100
   set -g status-left-length 100
