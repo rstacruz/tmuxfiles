@@ -1,3 +1,18 @@
+# tmuxfiles
+
+> Rico's tmux files
+
+## Install
+
+```sh
+# Clone in somewhere. I prefer it in ~/Config/tmuxfiles
+git clone https://github.com/rstacruz/tmuxfiles.git
+
+# Link it from there
+cd tmuxfiles
+make link
+```
+
 ## Command reference
 
     $ tmux -u                # utf8-enabled mode
