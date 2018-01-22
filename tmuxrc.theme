@@ -6,21 +6,20 @@
 
 # Status bar styles
   set -g clock-mode-colour '#222222'
-  set -g status-style 'fg=#666666'
+  set -g status-style 'fg=#888888'
   setw -g message-style 'fg=blue'
-  setw -g window-status-style 'fg=default'
-  setw -g window-status-current-style 'bold,fg=white'
-  setw -g window-status-activity-style 'fg=#10307a'
+  setw -g window-status-style ''
+  setw -g window-status-current-style 'bold'
+  setw -g window-status-activity-style ''
 
 # Status format
-# set -g status-right '#[fg=blue]#S #[fg=#333333]%I:%M %p'
   set -g status-right '#[fg=blue]#S '
   if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=red](#(hostname)) '"
   set -g status-left ' '
 
 # Tabs
   setw -g window-status-separator '  '
-  setw -g window-status-current-format '∙'
+  setw -g window-status-current-format '●'
   setw -g window-status-format '∙'
 
 # Status line options
