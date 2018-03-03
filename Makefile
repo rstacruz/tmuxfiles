@@ -1,5 +1,5 @@
 link: tpm
-	if [[ ! . -ef ~/.tmux ]]; then ln -nfs "`pwd -LP`" ~/.tmux; fi
+	if [ ! . -ef ~/.tmux ]; then ln -nfs "`pwd -LP`" ~/.tmux; fi
 	ln -nfs "`pwd -LP`"/tmux.conf ~/.tmux.conf
 
 tpm:
