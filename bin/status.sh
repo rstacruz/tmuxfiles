@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-date +"%I:%M %p"
+date=$(date +"%I:%M %p")
+echo $date
