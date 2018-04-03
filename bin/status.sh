@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
-date=$(date +"%I:%M %p")
-echo $date
+if [ -f /etc/arch-release ]; then
+    # pass
+else
+    date=$(date +"%I:%M %p")
+    echo $date
+fi
