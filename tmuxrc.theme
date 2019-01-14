@@ -13,14 +13,14 @@
   setw -g window-status-activity-style ''
 
 # Status format
-  set -g status-right '#[fg=blue]#S#($HOME/.tmux/bin/status.sh)'
-  if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=red](#(hostname)) '"
+  set -g status-right '  #[fg=blue]#S#($HOME/.tmux/bin/status.sh)'
+  if-shell 'test -n "$SSH_TTY"' "set -g status-right '  #[fg=blue]#S #[fg=red]#(hostname)'"
   set -g status-left ' '
-
+  
 # Tabs
   setw -g window-status-separator '  '
-  setw -g window-status-current-format '●'
-  setw -g window-status-format '∙'
+  setw -g window-status-current-format '━━ '
+  setw -g window-status-format ' · '
 
 # Status line options
   set -g status-position bottom
