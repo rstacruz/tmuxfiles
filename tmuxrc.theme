@@ -24,7 +24,7 @@
   setw -g window-status-format ' - '
 
 # Status line options
-  set -g status-position bottom
+  set -g status-position top
   set -g status-justify right
   set -g status-interval 10
   set -g status-right-length 100
