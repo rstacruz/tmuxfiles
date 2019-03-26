@@ -1,8 +1,8 @@
 # == Theme (colors) ==========================================================
 
 # Lines between panes
-  set -g pane-border-style 'fg=#000000'
-  set -g pane-active-border-style 'fg=#000000'
+  set -g pane-border-style 'fg=#888888'
+  set -g pane-active-border-style 'fg=#888888'
 
 # Status bar styles
   set -g clock-mode-colour '#222222'
@@ -15,13 +15,13 @@
 # Status format
   set -g status-right '#[fg=blue]#S'
   # if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=555555] -  #[fg=green]#(hostname)'"
-  if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=green]*'"
+  if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=green] ↑'"
   set -g status-left ' '
   
 # Tabs
   setw -g window-status-separator '  '
-  setw -g window-status-current-format '━━ '
-  setw -g window-status-format ' - '
+  setw -g window-status-current-format ' ▪ '
+  setw -g window-status-format ' ∙ '
 
 # Status line options
   set -g status-position top
