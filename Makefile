@@ -7,7 +7,7 @@ default:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-20s\033[0m %s\n", $$1, $$2}'
 	@echo
 
-link: tpm ## Links tmux.conf to ~/.tmux.conf
+link: tpm ## Links tmux.conf to ~/.tmux.conf [alias: l]
 	if [ ! . -ef ~/.tmux ]; then ln -nfs "`pwd -LP`" ~/.tmux; fi
 	ln -nfs "`pwd -LP`"/tmux.conf ~/.tmux.conf
 
@@ -19,6 +19,9 @@ tpm:
 		echo "  (or use 'make install')"; \
 	fi
 
-install: ## Reloads tmux and installs tpm plugins
+install: ## Reloads tmux and installs tpm plugins [alias: i]
 	tmux source ~/.tmux.conf
 	~/.tmux/plugins/tpm/bindings/update_plugins
+
+l: link
+i: install
