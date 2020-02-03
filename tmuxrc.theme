@@ -13,9 +13,9 @@
   setw -g window-status-activity-style ''
 
 # Status format
-  set -g status-right '#[fg=blue]#S'
+  set -g status-right '#[fg=blue]  #S'
   # if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=555555] -  #[fg=green]#(hostname)'"
-  if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=green] ↑'"
+  if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=green]#(hostname)'"
   set -g status-left ' '
   
 # Tabs
