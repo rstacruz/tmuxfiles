@@ -1,8 +1,8 @@
 # == Theme (colors) ==========================================================
 
 # Lines between panes
-  set -g pane-border-style 'fg=#888888'
-  set -g pane-active-border-style 'fg=#888888'
+  set -g pane-border-style 'fg=colour8'
+  set -g pane-active-border-style 'fg=colour1'
 
 # Status bar styles
   set -g clock-mode-colour '#888888'
