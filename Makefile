@@ -19,9 +19,12 @@ tpm:
 		echo "  (or use 'make install')"; \
 	fi
 
-install: ## Reloads tmux and installs tpm plugins [alias: i]
+reload: ## Reload tmux [alias: r]
 	tmux source ~/.tmux.conf
+
+install: reload ## Reloads tmux + install plugins [alias: i]
 	~/.tmux/plugins/tpm/bindings/update_plugins
 
 l: link
 i: install
+r: reload

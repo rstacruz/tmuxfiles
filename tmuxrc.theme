@@ -13,15 +13,15 @@
   setw -g window-status-activity-style ''
 
 # Status format
-  set -g status-right ' #[fg=colour15]#[bg=colour1] #S '
+  set -g status-right ' #[fg=colour1]#S'
   # if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]#S #[fg=555555] -  #[fg=green]#(hostname)'"
   if-shell 'test -n "$SSH_TTY"' "set -g status-right '#[fg=blue]  #S #[fg=green]#(hostname)'"
   set -g status-left ' '
   
 # Tabs
   setw -g window-status-separator ''
-  setw -g window-status-current-format '#[fg=colour4]‹#[fg=colour2]#I#[fg=colour4]┄#W› '
-  setw -g window-status-format ' #[fg=colour2]#I#[fg=colour8]┄#W  '
+  setw -g window-status-current-format '#[fg=colour4] #[fg=colour2]#I#[fg=colour4]┄#W '
+  setw -g window-status-format ' #[fg=colour2]#I#[fg=colour8]┄#W '
 
 # Status line options
   set -g status-position bottom
