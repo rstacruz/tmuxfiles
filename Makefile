@@ -1,30 +1,25 @@
 default:
-	@echo "Usage:"
-	@echo "  Type 'make link' to link files to ~/.config,"
-	@echo "  then type 'make install' to install."
-	@echo
 	@echo "Makefile targets:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m  %-20s\033[0m %s\n", $$1, $$2}'
 	@echo
 
-link: tpm ## Links tmux.conf to ~/.tmux.conf [alias: l]
-	if [ ! . -ef ~/.tmux ]; then ln -nfs "`pwd -LP`" ~/.tmux; fi
-	ln -nfs "`pwd -LP`"/tmux.conf ~/.tmux.conf
+install: link tpm reload ## Install ~/.tmux.conf and tmux plugin manager [alias: i]
+	@echo ""
+	@echo "=> Done! Use 'prefix-I' in Tmux to install plugins."
 
-tpm:
-	@if [ ! -d ./plugins/tpm ]; then \
-		mkdir -p plugins; \
-		git clone https://github.com/tmux-plugins/tpm ./plugins/tpm; \
-		echo "\n\033[32;1m→ NOTE:\033[0m Reload tmux and press prefix+I to install plugins."; \
-		echo "  (or use 'make install')"; \
-	fi
+link: # Install ~/.tmux.conf
+	rm -f ~/.tmux.conf
+	echo "source $(PWD)/tmux.conf" > ~/.tmux.conf
 
-reload: ## Reload tmux [alias: r]
-	tmux source ~/.tmux.conf
+tpm: plugins/tpm # Install tmux plugin manager
+plugins/tpm:
+	mkdir -p plugins
+	git clone https://github.com/tmux-plugins/tpm plugins/tpm
 
-install: reload ## Reloads tmux + install plugins [alias: i]
-	~/.tmux/plugins/tpm/bindings/update_plugins
+reload: # Reload config
+	if [[ -n "$$TMUX" ]]; then tmux source ~/.tmux.conf; fi
 
-l: link
+clean: ## Uninstall
+	rm -rf plugins/tpm ~/.tmux.conf
+
 i: install
-r: reload
