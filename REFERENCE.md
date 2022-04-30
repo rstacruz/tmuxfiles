@@ -1,5 +1,7 @@
 # Key reference
 
+## Tabs
+
 | Key               | Description   |
 | ----------------- | ------------- |
 | `^b ^c`           | New tab       |
@@ -7,7 +9,7 @@
 | `^b ^n` / `^b `p` | Next/prev tab |
 | `^b ,`            | Rename tab    |
 | `^b {0..9}`       | Switch to tab |
-| `^b w`            | Switch to...  |
+| `^b ^w`           | Switch to...  |
 
 ## Panes
 
@@ -33,6 +35,7 @@
 | Key    | Description                 |
 | ------ | --------------------------- |
 | `^b ?` | Help                        |
+| `^b b` | Toggle status bar           |
 | `^b I` | Install plugins             |
 | `^b R` | Reload config               |
 
