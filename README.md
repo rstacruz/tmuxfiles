@@ -5,7 +5,7 @@ Rico's tmux files
 ## Install
 
 ```sh
-git clone https://github.com/rstacruz/tmuxfiles.git ~/.tmux
-cd ~/.tmux
+git clone https://github.com/rstacruz/tmuxfiles.git ~/.config/tmux
+cd ~/.config/tmux
 make install
 ```
