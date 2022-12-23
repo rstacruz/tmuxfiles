@@ -1,0 +1,5 @@
+# Change status position
+# set -g status-position top
+
+# Show the hostname
+# set -g status-left "#[fg=#ff8888] []#(hostname)] "
