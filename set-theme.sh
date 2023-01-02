@@ -16,7 +16,7 @@ style="name"
 name_style() {
   tmux setw -g window-status-separator ''
   tmux setw -g window-status-current-format "#[fg=8] ● #W "
-  tmux setw -g window-status-format "#[fg=9] ● #W "
+  tmux setw -g window-status-format "#[fg=9] ▪ #W "
   tmux set -g status-right " #[fg=8]──  #S "
 }
 
