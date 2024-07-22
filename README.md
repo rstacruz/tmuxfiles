@@ -7,5 +7,6 @@ Rico's tmux files
 ```sh
 git clone https://github.com/rstacruz/tmuxfiles.git ~/.config/tmux
 cd ~/.config/tmux
-make install
+
+bash setup.sh
 ```
