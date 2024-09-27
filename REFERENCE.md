@@ -4,45 +4,53 @@
 
 | Key               | Description   |
 | ----------------- | ------------- |
-| `^b ^c`           | New tab       |
-| `^b ^x`           | Close tab     |
-| `^b ^n` / `^b `p` | Next/prev tab |
-| `^b ,`            | Rename tab    |
-| `^b {0..9}`       | Switch to tab |
-| `^b ^w`           | Switch to...  |
+| `^a ^c`           | New tab       |
+| `^a ^x`           | Close tab     |
+| `^a ^n` / `^a `p` | Next/prev tab |
+| `^a ,`            | Rename tab    |
+| `^a {0..9}`       | Switch to tab |
+| `^a ^w`           | Switch to...  |
 
 ## Panes
 
 | Key                       | Description          |
 | ------------------------- | -------------------- |
-| `^b ^s` (default: `^b "`) | Split horiz          |
-| `^b ^v` (def: `^b %`)     | Split vert           |
-| `^b o`                    | Focus next pane      |
-| `^b q`                    | Focus pane...        |
-| `^b {`                    | Move pane            |
-| `^b !`                    | Move pane to new tab |
+| `^a ^s` (default: `^a "`) | Split horiz          |
+| `^a ^v` (def: `^a %`)     | Split vert           |
+| `^a o`                    | Focus next pane      |
+| `^a q`                    | Focus pane...        |
+| `^a {`                    | Move pane            |
+| `^a !`                    | Move pane to new tab |
 
 ## Sessions
 
 | Key    | Description    |
 | ------ | -------------- |
-| `^b #` | New session    |
-| `^b $` | Rename session |
-| `^b *` | Close session  |
+| `^a #` | New session    |
+| `^a $` | Rename session |
+| `^a *` | Close session  |
 
 ## Other shortcuts
 
-| Key    | Description                 |
-| ------ | --------------------------- |
-| `^b ?` | Help                        |
-| `^b b` | Toggle status bar           |
-| `^b I` | Install plugins             |
-| `^b R` | Reload config               |
+| Key    | Description       |
+| ------ | ----------------- |
+| `^a ?` | Help              |
+| `^a b` | Toggle status bar |
+| `^a I` | Install plugins   |
+| `^a R` | Reload config     |
 
 ## Copying
 
 | Key    | Description                 |
 | ------ | --------------------------- |
-| `^b [` | Scroll mode (exit with `q`) |
+| `^a [` | Scroll mode (exit with `q`) |
 
 `space` to select in scroll mode, then `Enter` to copy to clipboard
+
+## Fingers
+
+| Key    | Description      |
+| ------ | ---------------- |
+| `^a F` | Copy url/path... |
+
+Shows hints for things to copy
