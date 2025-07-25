@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-icon_active="󰇊"
-icon_inactive="·"
+icon_active=" ━━━ "
+icon_inactive=" ─── "
 icon_zoom="󰊓"
 tmux set -g pane-border-style "fg=colour8"
 tmux set -g pane-active-border-style "fg=colour4"
