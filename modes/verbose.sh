@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-icon_active="━"
-icon_inactive="━" # 󱅊 󰇊
-icon_sep="  │  "
+icon_active="󰇊"
+icon_inactive="󱅊" # 󱅊 󰇊
+icon_sep=" │ "
 icon_zoom="󰊓"
-colour_fg="colour243"
-tmux set -g status-style "fg=$colour_fg,bg=colour234"
+colour_fg="colour1"
+colour_sep="colour12"
+colour_bg="colour0"
+tmux set -g status-style "fg=$colour_fg,bg=$colour_bg"
 tmux set -g pane-border-style "fg=$colour_fg"
 tmux set -g pane-active-border-style "fg=colour4"
-tmux setw -g window-status-separator "#[fg=colour236] $icon_sep"
+tmux setw -g window-status-separator "#[fg=$colour_sep] $icon_sep"
 tmux setw -g window-status-current-format " #{s|1|#[fg=colour1]$icon_zoom|;s|0|$icon_active|:window_zoomed_flag}#[fg=colour3] #W"
 tmux setw -g window-status-format "#[fg=$colour_fg] $icon_inactive #W"
 tmux set -g status-left '#[bg=colour236,fg=colour6]#{?#{==:#S,0},,  #S}  #[default] '
